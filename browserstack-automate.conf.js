@@ -1,5 +1,9 @@
 const browserStackAutomateConfig= {
 
+    specs: [
+        './test/web/specs/**/*.js'
+    ],
+
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_KEY,
     hostname: 'hub.browserstack.com',
