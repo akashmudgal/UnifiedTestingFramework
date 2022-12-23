@@ -1,13 +1,7 @@
-const browserStackAutomateConfig= {
-
+const browserstackWebConfig = {
     specs: [
         './test/web/specs/**/*.js'
     ],
-
-    user: process.env.BROWSERSTACK_USERNAME,
-    key: process.env.BROWSERSTACK_KEY,
-    hostname: 'hub.browserstack.com',
-    services: ['browserstack'],
     capabilities: [
         {
             "browserName" : "Chrome",
@@ -30,5 +24,5 @@ const browserStackAutomateConfig= {
     ]
 }
 
-const {config : baseConfig }=require("./base.conf.js")
-exports.config={...baseConfig , ...browserStackAutomateConfig}
+const { config: browserStackConfig} = require("./browserstack.conf.js")
+exports.config={...browserStackConfig , ...browserstackWebConfig}
