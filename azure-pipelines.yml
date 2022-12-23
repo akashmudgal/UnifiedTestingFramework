@@ -1,7 +1,7 @@
 trigger:
 - master
 
-pool: Default
+pool: SelfHosted_Akash
 
 steps:
 - task: NodeTool@0
