@@ -14,8 +14,3 @@ steps:
     npm run build
     npm run android-browserstack
   displayName: 'npm install and build'
-  
-- task: AllureGenerate@1
-  inputs:
-    resultsDir: 'allure-results'
-    targetDir: 'allure-report/$(Build.BuildNumber)'
