@@ -13,6 +13,5 @@ steps:
 
 - script: |
     npm install
-    npm run build
     npm run android-browserstack
   displayName: 'npm install and build'
