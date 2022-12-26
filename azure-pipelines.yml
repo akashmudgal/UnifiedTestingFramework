@@ -6,7 +6,9 @@ pool: SelfHosted_Akash
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSource: 'spec'
+    versionSpec: '16.x'
+    checkLatest: true
   displayName: 'Install Node.js'
 
 - script: |
