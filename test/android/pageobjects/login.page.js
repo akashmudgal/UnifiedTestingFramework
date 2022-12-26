@@ -1,37 +1,42 @@
 const passwordPage = require('./msonline.password.page');
 
-class TeamsLoginPage {
+class TeamsAndroidLoginPage {
 
     get inputEmailBox(){
-        return $('id=com.microsoft.teams:id/edit_email');
+        return $('id=edit_email');
     }
 
     get signInBtn(){
-        return $('id=com.microsoft.teams:id/sign_in_button');
+        return $('id=sign_in_button');
     }
 
     get nextBtn(){
-        return $('android.widget.Button')
+        return $('id=action_next_button')
     }
 
+    get gotItBtn(){
+        return $('id=action_last_button')
+    }
+
+    get privacyNoticeAcceptBtn(){
+        return $('~Got it button')
+    }
     async login(){
         await this.inputEmailBox.setValue("adelev@M365x24255098.onmicrosoft.com");
         await this.signInBtn.click();
         await passwordPage.passwordField.setValue("80r8Ea1BLA");
         await passwordPage.signinBtn.click();
-        const nextBtn=await this.nextBtn;
-        let i=0;
-        while(i<3)
-        {
-            await nextBtn.click();
-        }
+        await this.nextBtn.click();
+        await this.nextBtn.click();
+        await this.gotItBtn.click();
         try{
-            await this.nextBtn.click();
+            await this.privacyNoticeAcceptBtn.click();
         }
         catch{
             //ignore
         }
+        
     }
 }
 
-module.exports=new TeamsLoginPage();
+module.exports=new TeamsAndroidLoginPage();

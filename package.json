@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "android-browserstack": "npx wdio browserstack-android.js",
-    "web-browserstack": "npx wdio browserstack-web.js"
+    "web-browserstack": "npx wdio browserstack-web.js",
+    "ios-browserstack": "npx wdio browserstack-iOS.js"
   },
   "keywords": [],
   "author": "",

@@ -13,10 +13,10 @@ const browserstackAndroidConfig = {
         device: 'Google Pixel 3',
         os_version: "9.0"
         },
-        {
-        device: 'Samsung Galaxy S10e',
-        os_version: "9.0"
-        }
+        // {
+        // device: 'Samsung Galaxy S10e',
+        // os_version: "9.0"
+        // }
     ]
 }
 

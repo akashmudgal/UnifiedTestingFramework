@@ -4,21 +4,20 @@ const browserstackiOSConfig = {
     ],
 
     commonCapabilities: {
-        project: "UTF - IOS",
-        build: 'iOS Parallel',
-        name: 'parallel_test',
-        app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-        'browserstack.debug': true
+        app: process.env.BROWSERSTACK_APP_ID || 'bs://b42a26fcedc3afa2468b39c653c4c50030304866',
+        'browserstack.debug': true,
+        'browserstack.resignApp' : false
       },
 
     capabilities: [{
-        device: "iPhone 11 Pro",
-        os_version: "13"
+        device: "iPhone XS",
+        os_version: "14"
     },
-    {
-        device: "iPhone 11 Pro Max",
-        os_version: "13"
-    }],
+    // {
+    //     device: "iPhone 11 Pro Max",
+    //     os_version: "13"
+    // }
+    ],
 }
 
 const { config: browserStackConfig} = require("./browserstack.conf.js")

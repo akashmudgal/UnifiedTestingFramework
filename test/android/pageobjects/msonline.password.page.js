@@ -5,7 +5,7 @@ class MSPasswordPage {
     }
 
     get signinBtn(){
-        let selector='new UiSelector().text("Sign in").className("android.widget.Button")';
+        let selector='new UiSelector().text("Sign in")';
         return $(`android=${selector}`);
     }
 }
