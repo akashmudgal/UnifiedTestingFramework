@@ -13,5 +13,8 @@ steps:
 
 - script: |
     npm install
+  displayName: 'npm install'
+
+- script: |
     npm run android-browserstack
-  displayName: 'npm install and build'
+  displayName: 'Run Tests'
